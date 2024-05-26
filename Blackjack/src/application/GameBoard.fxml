@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="477.0" prefWidth="566.0" style="-fx-background-color: antiquewhite;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GameBoardController">
+   <children>
+      <Label fx:id="infoLabel" alignment="CENTER" layoutX="189.0" layoutY="14.0" prefHeight="17.0" prefWidth="177.0" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <VBox alignment="TOP_CENTER" layoutX="32.0" layoutY="39.0" prefHeight="200.0" prefWidth="490.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Dealer Score: ">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+                  <Label fx:id="dealerScoreLabel" text="0">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+               </children>
+            </HBox>
+            <HBox fx:id="dealerHandGrid" alignment="CENTER" prefHeight="182.0" prefWidth="490.0" style="-fx-background-color: lightgreen;" />
+         </children>
+      </VBox>
+      <VBox alignment="TOP_CENTER" layoutX="32.0" layoutY="258.0" prefHeight="200.0" prefWidth="490.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="34.0" prefWidth="490.0">
+               <children>
+                  <Button fx:id="hitBtn" mnemonicParsing="false" onAction="#hitBtnClick" text="Hit" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="standBtn" mnemonicParsing="false" onAction="#standBtnClick" text="Stand" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin></Button>
+                  <Button fx:id="resetBtn" layoutX="253.0" layoutY="10.0" mnemonicParsing="false" onAction="#resetBtnClick" text="New Game" textAlignment="CENTER" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Player Score: ">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+                  <Label fx:id="playerScoreLabel" text="0">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+               </children>
+            </HBox>
+            <HBox fx:id="playerHandGrid" alignment="CENTER" prefHeight="182.0" prefWidth="490.0" style="-fx-background-color: lightgreen;" />
+         </children></VBox>
+   </children>
+</AnchorPane>
